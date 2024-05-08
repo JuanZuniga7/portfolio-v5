@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
 :root {
   --foreground-rgb: rgb(211, 216, 232);
 }
@@ -35,4 +41,25 @@ body {
 
 .sticky-card {
   top: calc(var(--index) * 4rem);
+}
+
+.animate-charcter
+{
+  background-image: linear-gradient(
+    -225deg,
+    #33ccff 0%,
+    #ccccff 29%,
+    #ff1361 67%,
+    #ff9999 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
 }
