@@ -43,8 +43,7 @@ body {
   top: calc(var(--index) * 4rem);
 }
 
-.animate-charcter
-{
+.animate-character {
   background-image: linear-gradient(
     -225deg,
     #33ccff 0%,
@@ -57,7 +56,7 @@ body {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
+  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;

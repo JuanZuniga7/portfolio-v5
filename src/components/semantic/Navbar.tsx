@@ -7,7 +7,10 @@ function Navbar() {
     <header className="bg-transparent">
       <div className="flex items-center justify-between py-5">
         <div className="flex flex-shrink-0 items-center">
-          <Link href="/" className="text-4xl font-serif italic font-bold uppercase animate-charcter">
+          <Link
+            href="/"
+            className="text-4xl font-serif italic font-bold uppercase animate-character"
+          >
             Juan Zuniga
           </Link>
         </div>

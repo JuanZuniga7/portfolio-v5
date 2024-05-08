@@ -8,27 +8,7 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 import svgHero from "../../public/svg/hero.svg";
 
-async function getData() {
-  const res = await fetch(
-    `https://dev.to/api/articles?username=${personalData.devUsername}`
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const data = await res.json();
-
-  const filtered = data
-    .filter((item: any) => item?.cover_image)
-    .sort(() => Math.random() - 0.5);
-
-  return filtered;
-}
-
 async function HeroSection() {
-  const blogs = await getData();
-
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
