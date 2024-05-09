@@ -99,7 +99,7 @@ const codePresentation: ICodePresentation[] = [
                 ]
             },
         ],
-        margin: "ml-4 lg:ml-8"
+        margin: "4"
     },
     {
         lines:[
@@ -110,7 +110,7 @@ const codePresentation: ICodePresentation[] = [
                 ]
             }
         ],
-        margin: "ml-8 lg:ml-16"
+        margin: "8"
     },
     {
         lines:[
@@ -133,7 +133,7 @@ const codePresentation: ICodePresentation[] = [
                 ]
             }
         ],
-        margin: "ml-12 lg:ml-24"
+        margin: "12"
     },
     {
         lines:[
@@ -143,7 +143,7 @@ const codePresentation: ICodePresentation[] = [
                 ]
             }
         ],
-        margin: "ml-8 lg:ml-16"
+        margin: "8"
     },
     {
         lines:[
@@ -153,7 +153,7 @@ const codePresentation: ICodePresentation[] = [
                 ]
             }
         ],
-        margin: "ml-4 lg:ml-8"
+        margin: "4"
     },
     {
         lines:[
