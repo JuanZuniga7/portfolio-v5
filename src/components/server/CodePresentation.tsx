@@ -19,9 +19,9 @@ export default function CodePresentation() {
             <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
                 <code className="font-mono text-xs md:text-sm lg:text-base flex flex-col gap-1">
                     {codePresentation.map((lines, index) => (
-                        <>
+                        <div className={lines.margin}>
                             {lines.lines.map((line, index) => (
-                                <div key={index} className={`flex flex-row items-center flex-wrap gap-1 ${lines.margin}`}>
+                                <div key={index} className={`flex flex-row items-center flex-wrap gap-1`}>
                                     {line.line.map((item, index) => (
                                         <CodeWord key={index}
                                             color={
@@ -34,7 +34,7 @@ export default function CodePresentation() {
                                     ))}
                                 </div>
                             ))}
-                        </>
+                        </div>
                     ))}
                 </code>
             </div>
