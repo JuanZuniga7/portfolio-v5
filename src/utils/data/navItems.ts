@@ -1,4 +1,4 @@
-import INavItems from "../types/navItems"
+import INavItems from "../types/navItems.type"
 
 export const navItems: INavItems[] = [
     {

@@ -2,11 +2,12 @@ import { personalData } from "@/utils/data/personalData";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
+import { FaGitlab } from "react-icons/fa";
 import svgHero from "../../public/svg/hero.svg";
+import SocialButton from "@/components/common/SocialButton";
 
 async function HeroSection() {
   return (
@@ -18,73 +19,40 @@ async function HeroSection() {
         height={795}
         className="absolute -top-[98px] -z-10"
       />
-
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
-            This is <span className=" text-pink-500">{personalData.name}</span>
+            This is <span className="animate-character">{personalData.name}</span>
             {` , I'm a Professional `}
-            <span className=" text-[#16f2b3]">{personalData.designation}</span>.
+            <span className="animate-character">{personalData.profile}</span>.
           </h1>
-
           <div className="my-12 flex items-center gap-5">
-            <Link
-              href={personalData.github}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsGithub size={30} />
-            </Link>
-            <Link
-              href={personalData.linkedIn}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsLinkedin size={30} />
-            </Link>
-            <Link
-              href={personalData.facebook}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaFacebook size={30} />
-            </Link>
-            <Link
-              href={personalData.leetcode}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
-              href={personalData.twitter}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+            <SocialButton link={personalData.github} children={<BsGithub size={30} />} />
+            <SocialButton link={personalData.gitlab} children={<FaGitlab size={30} />} />
+            <SocialButton link={personalData.linkedin} children={<BsLinkedin size={30} />}/>
+            <SocialButton link={personalData.x} children={<FaXTwitter size={30} />} />
           </div>
-
           <div className="flex items-center gap-3">
             <Link
               href="#contact"
-              className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
+              className="p-[4px] relative flex items-center justify-center overflow-hidden rounded-full"
             >
-              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+              <div className="absolute w-52 rounded-full h-4/5 animate-border -z-10 bg-gradient-to-b from-10% from-pink-500 via-50% via-indigo-500 to-90% to-pink-500"></div>
+              <button className="px-3 z-10 bg-indigo-500 text-xs md:px-8 py-3 md:py-4 rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
                 <span>Contact me</span>
                 <RiContactsFill size={16} />
               </button>
             </Link>
-
             <Link
-              className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
-              role="button"
-              target="_blank"
-              href={personalData.resume}
+              href="#contact"
+              className="p-[4px] relative flex items-center justify-center overflow-hidden rounded-full"
             >
-              <span>Get Resume</span>
-              <MdDownload size={16} />
+              <div className="absolute rounded-full w-52 h-4/5 animate-border2 -z-10 bg-gradient-to-r from-10% from-indigo-500 via-50% via-pink-500 to-90% to-indigo-500"></div>
+              <button className="px-3 z-10 bg-pink-500 text-xs md:px-8 py-3 md:py-4 rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+                <span>Get Resume</span>
+                <MdDownload size={16} />
+              </button>
             </Link>
           </div>
         </div>
@@ -94,7 +62,7 @@ async function HeroSection() {
             <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
           </div>
           <div className="px-4 lg:px-8 py-5">
-            <div className="flex flex-row space-x-2">
+            <div className="flex flex-row justify-end space-x-2">
               <div className="h-3 w-3 rounded-full bg-red-400"></div>
               <div className="h-3 w-3 rounded-full bg-orange-400"></div>
               <div className="h-3 w-3 rounded-full bg-green-200"></div>

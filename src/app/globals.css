@@ -8,6 +8,32 @@
   }
 }
 
+@keyframes borderAnimation{
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+}
+
+@keyframes borderAnimation2{
+  from{
+    rotate: 360deg;
+  }
+  to{
+    rotate: 0deg;
+  }
+}
+
+.animate-border2{
+  animation: borderAnimation2 2s ease-in-out infinite;
+}
+
+.animate-border{
+  animation: borderAnimation 2s ease-in-out infinite;
+}
+
 :root {
   --foreground-rgb: rgb(211, 216, 232);
 }
@@ -46,10 +72,11 @@ body {
 .animate-character {
   background-image: linear-gradient(
     -225deg,
-    #33ccff 0%,
-    #ccccff 29%,
-    #ff1361 67%,
-    #ff9999 100%
+    #ff99ff 0%,
+    rgb(99 102 241) 30%,
+    #6600ff 50%,
+    rgb(99 102 241) 70%,
+    #ff99ff 100%
   );
   background-size: auto auto;
   background-clip: border-box;

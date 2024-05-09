@@ -1,0 +1,15 @@
+export default interface IPersonalData{
+    name: string,
+    location: string,
+    skills: string[],
+    profile: string,
+    email: string,
+    phone: string,
+    github: string,
+    gitlab: string,
+    linkedin: string,
+    x: string,
+    resume: string,
+    devAlias: string,
+    description: string,
+}
