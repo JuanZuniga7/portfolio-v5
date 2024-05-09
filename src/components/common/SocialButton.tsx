@@ -10,7 +10,7 @@ export default function SocialButton({link, children}:Props){
         <Link
               href={link}
               target="_blank"
-              className="transition-transform text-indigo-500 scale-90 hover:scale-125 duration-300"
+              className="transition-transform text-indigo-500 hover:scale-[2] duration-300 scale-150"
             >
                 {children}
             </Link>
