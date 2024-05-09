@@ -7,7 +7,7 @@ export default function SocialRow(){
             {socialData.map((item) => (
                 <li key={item.name}>
                     <SocialButton link={item.path}>
-                        <figure>
+                        <figure className="transition-transform hover:scale-150 duration-300">
                             {item.icon}
                         </figure>
                     </SocialButton>
