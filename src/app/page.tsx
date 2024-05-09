@@ -28,10 +28,18 @@ async function HeroSection() {
             <span className="animate-character">{personalData.profile}</span>.
           </h1>
           <div className="my-12 flex items-center gap-5">
-            <SocialButton link={personalData.github} children={<BsGithub size={30} />} />
-            <SocialButton link={personalData.gitlab} children={<FaGitlab size={30} />} />
-            <SocialButton link={personalData.linkedin} children={<BsLinkedin size={30} />}/>
-            <SocialButton link={personalData.x} children={<FaXTwitter size={30} />} />
+            <SocialButton link={personalData.github}>
+              <BsGithub fontSize={30}/>
+            </SocialButton>
+            <SocialButton link={personalData.gitlab}>
+              <FaGitlab size={30} />
+            </SocialButton>
+            <SocialButton link={personalData.linkedin}>
+              <BsLinkedin size={30}/>
+            </SocialButton>
+            <SocialButton link={personalData.x}>
+              <FaXTwitter size={30}/>
+            </SocialButton>
           </div>
           <div className="flex items-center gap-3">
             <Link
