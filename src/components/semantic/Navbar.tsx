@@ -11,7 +11,7 @@ function Navbar() {
             href="/"
             className="text-4xl font-serif italic font-bold uppercase animate-character"
           >
-            Juan Zuniga
+            Rusted Cor
           </Link>
         </div>
         <nav>
