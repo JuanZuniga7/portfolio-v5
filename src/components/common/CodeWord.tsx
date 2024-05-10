@@ -7,6 +7,6 @@ interface Props{
 
 export default function CodeWord({key, color, value} :Props){
     return(
-        <span key={key} className={`${color} text-sm`}>{value}</span>
+        <span key={key} className={`${color}`}>{value}</span>
     )
 }
