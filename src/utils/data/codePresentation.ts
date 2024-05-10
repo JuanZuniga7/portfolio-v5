@@ -26,6 +26,8 @@ const codePresentation: ICodePresentation[] = [
                 line: [
                     { color: codeColors.var, value: "const" },
                     { color: codeColors.varName, value: "coder" },
+                    { color: codeColors.varName, value: ":"},
+                    { color: codeColors.interface, value: "IAwesomeDeveloper" },
                     { color: codeColors.var, value: "=" },
                     { color: codeColors.varName, value: "{" }
                 ]
