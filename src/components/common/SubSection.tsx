@@ -9,7 +9,7 @@ interface Props {
 
 export default function SubSection({ profile, title, description, reverse }: Props) {
     return (
-        <div className={`grid grid-cols-1 ${profile && "lg:grid-cols-2"} gap-8 lg:gap-16`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16`}>
             <div className={reverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
                 <p className="mb-5 text-[#16f2b3] text-2xl lg:text-4xl uppercase animate-character font-bold italic">
                     {title}
@@ -19,13 +19,14 @@ export default function SubSection({ profile, title, description, reverse }: Pro
                 </p>
             </div>
             {profile && (
-                <div className={`flex justify-center ${reverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}`}>
+                <div className={`flex items-center justify-center ${reverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}`}>
                     <Image
                         src={profile}
+                        priority
                         width={512}
                         height={512}
                         alt="Juan Zuniga"
-                        className="rounded-lg transition-all w-2/3 duration-1000 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer"
+                        className="rounded-full transition-all w-3/6 duration-1000 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer hover:shadow-2xl hover:shadow-indigo-600"
                     />
                 </div>
             )}

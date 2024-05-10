@@ -13,7 +13,7 @@ export default function Presentation({name, profile}: Props){
             Hello, <br/>
             This is <span className="select-none animate-character">{name}</span>
             {` , I'm a Professional `}
-            <span className="animate-character">{profile}</span>.
+            <span className="animate-character">{profile}</span>
           </h3>
           <SocialRow/>
           <CVAndContactButtons/>
