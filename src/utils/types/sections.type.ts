@@ -1,7 +1,5 @@
 export default interface ISection{
-    title: string
     subSections: ISubSection[]
-    reverse: boolean
 }
 
 export interface ISubSection{

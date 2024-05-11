@@ -1,4 +1,5 @@
 import Image from "next/image"
+import SubSectionTitle from "./SubSectionTitle"
 
 interface Props {
     profile?: string
@@ -9,11 +10,9 @@ interface Props {
 
 export default function SubSection({ profile, title, description, reverse }: Props) {
     return (
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16`}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 w-full">
             <div className={reverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
-                <p className="mb-5 text-[#16f2b3] text-2xl lg:text-4xl uppercase animate-character font-bold italic">
-                    {title}
-                </p>
+                <SubSectionTitle title={title} />
                 <p className="text-gray-100 text-base lg:text-lg whitespace-break-spaces text-left font-serif">
                     {description}
                 </p>

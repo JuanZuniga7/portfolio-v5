@@ -4,11 +4,12 @@ import Image from "next/image";
 import svgHero from "../../public/svg/hero.svg";
 import Presentation from "@/components/server/Presentation";
 import CodePresentation from "@/components/server/CodePresentation";
-import Section from "@/components/common/Section";
+import About from "@/components/server/About";
+import Experience from "@/components/server/Experience";
 
 async function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center gap-5 justify-between py-4 lg:py-12">
+    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12 gap-16">
       <Image
         src={svgHero.src}
         alt="Hero"
@@ -20,7 +21,10 @@ async function HeroSection() {
         <Presentation name={personalData.name} profile={personalData.profile} />
         <CodePresentation />
       </div>
-      <Section section={about} />
+      <div className="flex flex-col items-center justify-center w-full">
+        <About sections={about.subSections} />
+        <Experience />
+      </div>
     </section>
   );
 }

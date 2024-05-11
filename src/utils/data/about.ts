@@ -1,8 +1,6 @@
 import ISection from "../types/sections.type";
 
 export const about: ISection = {
-    reverse: false,
-    title: "About Me",
     subSections: [
         {
             title: "Who I am?",

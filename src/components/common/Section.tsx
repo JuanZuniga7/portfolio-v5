@@ -1,18 +1,16 @@
+import React from "react";
 import SectionTitle from "./SectionTitle";
-import SubSection from "./SubSection";
-import ISection from "@/utils/types/sections.type";
 
 interface Props{
-    section: ISection
+    title: string
+    children: React.ReactNode
 }
 
-export default function Section({ section }: Props) {
+export default function Section({ title, children }: Props) {
     return (
-        <div id="about" className="my-12 lg:my-16 relative">
-            <SectionTitle name="About" reverse={section.reverse} />
-            {section.subSections.map((subSection, index) => (
-                <SubSection key={index} profile={subSection.image} title={subSection.title} description={subSection.description} reverse={index % 2 === 1} />
-            ))}
+        <div id="about" className="py-12 lg:py-16 relative w-full">
+            <SectionTitle name={title} />
+            {children}
         </div>
     )
 }
