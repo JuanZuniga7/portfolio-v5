@@ -1,5 +1,6 @@
 import { personalData } from "@/utils/data/personalData";
 import { about } from "@/utils/data/about";
+import { experience } from "@/utils/data/experience";
 import Image from "next/image";
 import svgHero from "../../public/svg/hero.svg";
 import Presentation from "@/components/server/Presentation";
@@ -21,9 +22,9 @@ async function HeroSection() {
         <Presentation name={personalData.name} profile={personalData.profile} />
         <CodePresentation />
       </div>
-      <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full"> 
         <About sections={about.subSections} />
-        <Experience />
+        <Experience experienceData={experience} />
       </div>
     </section>
   );
