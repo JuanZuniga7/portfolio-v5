@@ -13,7 +13,7 @@ export default function Experience({ experienceData }: Props) {
             <SubSectionTitle title="Work Experience" />
             <div className="flex flex-col items-center justify-center mt-16">
                 {experienceData && experienceData.map((item, index) => (
-                    <HorizontalItem reverse={index % 2 === 0}>
+                    <HorizontalItem key={index} reverse={index % 2 === 0}>
                         <div className="flex flex-col justify-center font-serif h-full w-full text-left px-4 capitalize">
                             {Object.keys(item).map((key: string, index: number) => {
                                 if (key === "position") return <h3 key={index} className="text-lg md:text-xl lg:text-2xl xl:text-3xl animate-character font-bold font-mono">{item.position}</h3>
