@@ -6,16 +6,16 @@ export const navItems: INavItems[] = [
       path: "/#about",
     },
     {
+      label: "Education",
+      path: "/#education",
+    },
+    {
       label: "Experience",
       path: "/#experience",
     },
     {
       label: "Skills",
       path: "/#skills",
-    },
-    {
-      label: "Education",
-      path: "/#education",
     },
     {
       label: "Blogs",
