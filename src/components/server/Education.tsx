@@ -18,7 +18,7 @@ export default function Education({ educationData }: Props) {
                         <SubSectionTitle title={item.label} key={index} />
                         <div className="flex flex-col items-center justify-center mt-16">
                             {item.institution && item.institution.map((institution, index) => (
-                                <HorizontalItem reverse={index % 2 === 0}>
+                                <HorizontalItem key={index} reverse={index % 2 === 0}>
                                     {institution.certificate ? 
                                     <Link target="_blank" href={institution.certificate}>
                                         {Object.keys(institution).map((key: string, index: number) => {
