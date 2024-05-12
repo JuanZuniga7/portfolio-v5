@@ -7,6 +7,8 @@ import Presentation from "@/components/server/Presentation";
 import CodePresentation from "@/components/server/CodePresentation";
 import About from "@/components/server/About";
 import Experience from "@/components/server/Experience";
+import Skills from "@/components/server/Skills";
+import { skills } from "@/utils/data/skills";
 
 async function HeroSection() {
   return (
@@ -25,6 +27,7 @@ async function HeroSection() {
       <div className="flex flex-col items-center justify-center w-full"> 
         <About sections={about.subSections} />
         <Experience experienceData={experience} />
+        <Skills skills={skills} />
       </div>
     </section>
   );

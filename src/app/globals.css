@@ -26,6 +26,11 @@
   }
 }
 
+.animate-box{
+  animation: borderAnimation 5s linear infinite;
+  width: 150%;
+}
+
 .animate-border2{
   animation: borderAnimation2 2s ease-in-out infinite;
 }
