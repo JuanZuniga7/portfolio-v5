@@ -10,7 +10,7 @@ interface Props {
 
 export default function Skills({ skills }: Props) {
     return (
-        <Section title="Skills">
+        <Section id="skills" title="Skills">
             <div className="flex flex-col items-center gap-16">
                 {skills && skills.map((skill, index) => (
                     <div key={index} className="w-full h-full">
@@ -19,7 +19,7 @@ export default function Skills({ skills }: Props) {
                             {skill.skills && skill.skills.map((item, index) => (
                                 <>
                                     {skill.clickable ?
-                                        (<Link href={item.label} key={index} className="w-[90%] md:w-[48%] lg:w-[40%] xl:w-[30%] 3xl:w-[23%] relative overflow-hidden p-1 flex items-center justify-center rounded-xl">
+                                        (<Link href={`projects/${item.label}`} key={index} className="w-[90%] md:w-[48%] lg:w-[40%] xl:w-[30%] 3xl:w-[23%] relative overflow-hidden p-1 flex items-center justify-center rounded-xl">
                                             <SkillsCard item={item} clickable={skill.clickable} />
                                         </Link>) :
                                         (<div key={index} className="w-[90%] md:w-[48%] lg:w-[40%] xl:w-[30%] 3xl:w-[23%] relative overflow-hidden p-1 flex items-center justify-center rounded-xl">

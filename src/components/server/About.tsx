@@ -8,7 +8,7 @@ interface Props{
 
 export default function About({ sections }: Props){
     return(
-        <Section title="About me">
+        <Section id="about " title="About me">
             {sections.map((subSection, index) => (
                 <SubSection key={index} profile={subSection.image} title={subSection.title} description={subSection.description} reverse={index % 2 === 1} />
             ))}

@@ -9,7 +9,7 @@ interface Props {
 
 export default function Experience({ experienceData }: Props) {
     return (
-        <Section title="Experience">
+        <Section id="experience" title="Experience">
             <SubSectionTitle title="Work Experience" />
             <div className="flex flex-col items-center justify-center mt-16">
                 {experienceData && experienceData.map((item, index) => (

@@ -17,6 +17,7 @@ async function HeroSection() {
         src={svgHero.src}
         alt="Hero"
         width={1572}
+        priority
         height={795}
         className="absolute -top-[98px] -z-10"
       />
